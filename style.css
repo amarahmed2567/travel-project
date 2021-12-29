@@ -1,0 +1,582 @@
+:root{
+    --orange:#ffa500;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+    transition: all .1s ease-in-out;
+
+
+}
+*::selection{
+    color: #fff;
+    background-color: var(--orange);
+}
+/*ivon lalod*/
+i{
+    transition: all 0s linear;
+}
+
+/*start nav bar*/
+.navBar{
+    position: fixed;
+    width: 100%;
+    height:48.4px ;
+    color: #fff;
+    background-color: rgb(0, 0, 7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem ;
+    z-index: 1;
+}
+.navBar h1 {
+text-transform: lowercase;
+text-align: center;
+}
+.navBar h1 span{
+text-transform: uppercase;
+color:var(--orange)
+}
+.navBar .list{
+    color: #fff;
+    display: flex;
+    justify-content:stretch;
+    list-style: none;
+}
+.navBar .list a{
+    color: #fff;
+    flex: 1;
+    text-decoration: none;
+    margin:0 10px ;
+}
+.navBar .list a:hover{
+    color: var(--orange);
+}
+
+.navBar .icon{
+    cursor: pointer;
+}
+.navBar .icon i{
+    
+    padding: 0 .5rem;
+}
+.navBar .icon i:hover{
+    color: var(--orange);
+}
+/*menu-bar*/
+#menu-bar{
+    cursor: pointer;
+    display: none;
+}
+/*search*/
+.search{
+    width: 100%;
+    background-color: #111;
+    position:absolute;
+    top:-100%;
+}
+.search form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search form input{
+    width: 50%;
+    padding: .5rem 1rem;
+}
+.search form label{
+    background-color: var(--orange);
+    padding: .4rem 1rem;
+}
+
+/*actiev */
+.activ-search{
+    top: 100%;
+}
+/*loig in*/
+
+.login{
+    position: fixed;
+    inset: 100%;
+    top: -100%;
+    background-color: rgba(0, 0, 7, 0.808);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    z-index: 1;
+}
+.login h1{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    font-size: 50px;
+    color: var(--orange);
+}
+.login form{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+.login form input{
+    padding: .5rem 1.5rem;
+margin-bottom: 10px;
+width: 100%;
+margin-top: 10px;    
+
+}
+.login form button{
+    background-color: #fff;
+    padding: .5rem 1.5rem;
+    width: 50%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.login form button:hover{
+    color: var(--orange);
+    background-color: #000;
+}
+.login p a{
+    color: var(--orange);
+}
+.close{
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    top: 5%;;
+    right: 5%;
+}
+.close:hover{
+    color: var(--orange);
+}
+
+/*actiev */
+.activ-login{
+   inset: 0%;
+   top: 0%;
+}
+/*start header*/
+header{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 100vh;
+background-color: transparent;
+color: #fff;
+overflow: hidden;
+text-align: center;
+} 
+.header h1{
+    line-height: 2;
+}
+.header p{
+    line-height: 2;
+    margin-bottom: 20px;
+}
+header .header a{
+    color: #fff;
+    background-color: var(--orange);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+}
+header .header a:hover{
+color: var(--orange);
+background: #ffff;
+}
+.video{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(40%);
+}
+
+/*spans*/
+.spans{
+    display: flex;
+    justify-content:right;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 5%;
+}
+.spans .span-video{
+    display: flex;
+    width: 20px;
+    height: 10px;
+    background-color: transparent;
+    border-radius:20%;
+    cursor: pointer;
+    border: 2px solid #111 ;
+    margin: 0 5px;
+    outline: none;
+}
+
+.spans .activ-span{
+background-color: var(--orange);
+}
+/*start book now*/
+.header-text{
+    text-align: center;
+    padding: 5rem 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+.header-text span{
+    background-color:#ffc559bd ;
+    color: var(--orange);
+    padding: .5rem;
+}
+
+section .booked{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
+    grid-gap: 30px;
+    padding: 1rem;
+    padding-bottom:5rem ;
+}
+section .booked form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+    padding: 1rem; ;
+
+}
+section .booked form h1{
+margin: 10px 0;
+align-self: flex-start;
+}
+
+section .booked form input{
+    width: 70%;
+    padding: .5rem 1rem;
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+}
+section .booked form button{
+    padding: .5rem 1.5rem;
+    background-color: var(--orange);
+    color: #fff;
+    margin-top: 20px ;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+
+}
+section .booked form button:hover{
+    background-color: #fff;
+    color: var(--orange);
+    
+}
+section .booked .book-img{
+    display: block;
+    width: 100%;
+}
+section .booked .book-img img{
+    width: 100%;
+    object-fit: cover;
+}
+/*start packges*/
+section .packages{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+    padding: 1rem;
+padding: 0 1rem;
+}
+section .packages .box{
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+    border-radius: 10px;
+}
+section .packages .box .img-packages img{
+    width: 100%;
+    height: 10%;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+section .packages .box .text-packes{
+    padding:1.5rem;
+}
+section .packages .box .locion{
+    display:flex;
+}
+section .packages .box .locion i{
+    color: var(--orange);
+    margin-right:10px;
+    font-size: 20px;
+}
+section .packages .box .locion h3{
+    text-align: center;
+}
+.stares{
+    color: var(--orange);
+}
+section .packages .box .much{
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+section .packages .box .much span{
+text-decoration:line-through;
+color: #555;
+}
+section .packages .box a{
+
+    color: #fff;
+    background-color: var(--orange);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+  
+}
+section .packages .box a:hover{
+    background-color: #fff;
+    color:var(--orange)
+}
+
+/*end packges*/
+
+/*start services*/
+
+section .services{
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+    padding: 1rem;
+}
+section .services .services-box{
+    padding: 1rem;
+    text-align: center;
+
+}
+section .services  .box-activ{
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+}
+section .services .services-box i{
+color: var(--orange);
+font-size: 30px;
+}
+section .services .services-box p{
+    line-height: 1.7;
+}
+/*end services*/
+
+/*start gallery*/
+section .gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+    padding: 1rem;
+}
+section .gallery .gallery-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+section .gallery .gallery-box .img-gallyre{
+width:100%;
+height:100%;
+}
+section .gallery .gallery-box .img-gallyre img{
+    width: 100%;
+    height: 100%;
+}
+section .gallery .gallery-box .info{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.7;
+    color: #fff;
+    z-index: -1000;
+    width: 100%;
+    height: 0%;
+    cursor: pointer;
+    opacity: 0;
+
+}
+section .gallery .gallery-box:hover .info{
+    z-index: 1000;
+    height: 100%;
+    opacity: 1;
+}
+
+section .gallery .gallery-box .info h1{
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+section .gallery .gallery-box .info a{
+    margin-top: 1rem;
+    color: #fff;
+    background-color: var(--orange);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+}
+section .gallery .gallery-box .info a:hover{
+    background-color: #fff;
+    color:var(--orange)
+}
+/*end gallery*/
+
+/*start review*/
+section .review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+section .review .box-review{
+display: none;
+}
+section .review .activ-reviwe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+section .review .box-review .img-review img{
+border-radius: 50%;
+}
+section .review .box-review  .text-review{
+    text-align: center;
+    width: 50%;
+    line-height: 2;
+}
+
+/*end review*/
+
+/*start contact*/
+
+section .contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
+    grid-gap: 30px;
+    padding: 1rem;
+    padding-bottom:5rem ;
+}
+section .contact .img-contact img{
+    width: 100%;
+}
+
+
+section .contact form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+    padding: 1rem; ;
+
+}
+
+
+section .contact form input, textarea{
+    width: 70%;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    box-shadow: -2px -2px 10px #ccc;
+}
+section .contact form button{
+    padding: .5rem 1.5rem;
+    background-color: var(--orange);
+    color: #fff;
+    margin-top: 20px ;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+
+}
+section .contact form button:hover{
+    background-color: #fff;
+    color: var(--orange);
+    
+}
+/*end contact*/
+
+.cribt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    font-size: 15px;
+}
+.cribt span{
+    color:var(--orange);
+}
+
+
+
+
+
+
+
+
+/*madie $*/
+@media (max-width:768px) {
+    #menu-bar{
+        display:flex ;
+    }
+    .navBar .list{
+        display: none;
+    }
+    .mobil .list {
+        bottom: 0;
+        top: 48.4px;
+        display: block;
+        position: fixed;
+        background-color: #111;
+        width: 100%;
+        text-align: center;
+} 
+.mobil .list li{
+    padding-bottom: 1rem;
+}
+
+
+section .booked,section .contact {
+    display: block;
+    padding: 1rem;
+    padding-bottom:5rem ;
+}
+}
+
+
